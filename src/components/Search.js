@@ -1,6 +1,6 @@
 import SearchIcon from '@material-ui/icons/Search';
 import MicIcon from '@material-ui/icons/Mic';
-import { Button } from '@material-ui/icons/core';
+import {Button} from '@material-ui/icons/core';
 import styled from 'styled-components';
 //import { Search } from '@material-ui/icons';
 
