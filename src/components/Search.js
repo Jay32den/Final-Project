@@ -1,72 +1,69 @@
-import React from 'react';
-
-import AppsIcon from '@material-ui/icons/Apps';
-import AvatarIcon from '@material-ui/core/Avatar';
-
-import Search from './Search';
+import SearchIcon from '@material-ui/icons/Search';
+import MicIcon from '@material-ui/icons/Mic';
+import { Button } from '@material-ui/core';
 import styled from 'styled-components';
+import React from 'react';
+import { useState } from 'react';
 
-const HomeContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-`;
-
-const HeaderContainer = styled.div`
+const SearchInput = styled.div`
     display: flex;
-    justify-content: space-between;
-    padding: 20px 30px;
-    align-itens: center;
-`;
-
-const Header = styled.div`
-    display: flex;
-    align-itmes: center;
-    p{
-        margin-right: 20px;
-        font-size: 15px;
+    align-items: center;
+    border: 1px solid lightgray;
+    height: 30px;
+    padding: 10px 15px;
+    width: 500px;
+    margin: 0px auto;
+    border-radius: 999px;
+    input {
+        flex: 1;
+        padding: 8px 13px;
+        font-size: medium;
+        border: 0;
+        outline: 0;
     }
-    .left-margin{
-        margin-left: 20px;
+    .searchicon {
+        color: gray;
     }
 `;
 
-const BodyContainer = styled.div`
-    flex: 1;
-    display: flex;
-    margin-top: 10%;
-    flex-direction: column;
-    img {
-        object-fit: contain;
-        height: 100px;
-        margin-bottom: 5px;
+const SearchButton = styled.div`
+    margin-top: 20px;
+    dislplay: flex;
+    justify-content: center;
+    button {
+        margin: 5px;
+        background: #f8f8f8 !important;
+        border: 1px solid white;
+        text-transform: inherit;
+        &:hover {
+            margin: 5px;
+            background: #f8f8f8 !important;
+            color: #000;
+            border: 1px solid #c6c6c6;
+        }
     }
 `;
 
-const Home = () => {
+const Search = ({ hide }) => {
+    const [input, setInput] = useState("");
+
     return (
-        <HomeContainer>
-            <HeaderContainer>
-                <Header>
-                    <p>About</p>
-                    <p>Store</p>
-                </Header>
-                <Header>
-                    <p>Gmail</p>
-                    <p>Images</p>
-                    <AppsIcon className = 'left-margin'/>
-                    <AvatarIcon className = 'left-margin'/>
-                </Header>
-            </HeaderContainer>
-            <BodyContainer>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/320px-Google_2015_logo.svg.png" alt="google-logo" />
-            
-            <div>
-                    <Search />
-                </div>
-            </BodyContainer> 
-        </HomeContainer>
+        <form>
+            <SearchInput>
+            <SearchIcon className = 'searchicon' />
+            <input value = {input} onChange = {e => setInput(e.target.value)} />
+            <MicIcon />
+            </SearchInput>
+            {
+                !hide && (
+                    <SearchButton>
+                        <Button type = "submit" variant = "outlined">Google Search</Button>
+                        <Button variant = "outlined">I am feeling lucky</Button>
+                    </SearchButton>
+                )
+            }
+        </form>
     )
 };
 
-export default Home;
+export default Search;
