@@ -146,7 +146,7 @@ const SearchPage = () => {
                         <div className="result">
                             <SearchPageLink href={item.link}>
                                 {item.pagemap?.cse_image?.length > 0 && item.pagemap?.cse_image[0]?.src && (
-                                    <img src="https://thewebdev.tech/static/ce59ef6831a6ff9cba3b957baece8d8c/a3e81/logo.webp"
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"
                                     alt=""/>
                                 )}
                                 {item.displayLink}
