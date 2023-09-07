@@ -74,7 +74,7 @@ const Search = ({ hide }) => {
                 {!hide && (
                     <SearchButton>
                         <Button type="submit" variant="outlined">Google Search</Button>
-                        <Button variant="outlined">I am feeling lucky</Button>
+                        
                     </SearchButton>
                 )
             }
