@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Google from '../image/googleimage.jpg';
 import AppsIcon from '@material-ui/icons/Apps';
 import AvatarIcon from '@material-ui/core/Avatar';
 
@@ -38,7 +38,7 @@ const BodyContainer = styled.div`
     flex-direction: column;
     img {
         object-fit: contain;
-        height: 100px;
+        height: 70px;
         margin-bottom: 5px;
     }
 `;
@@ -49,7 +49,7 @@ const Home = () => {
             <HeaderContainer>
                 <Header>
                     <p>About</p>
-                    <p>Store</p>
+                    
                 </Header>
                 <Header>
                     <p>Gmail</p>
@@ -59,7 +59,7 @@ const Home = () => {
                 </Header>
             </HeaderContainer>
             <BodyContainer>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/320px-Google_2015_logo.svg.png" alt="google-logo" />
+            <img src= {Google} alt="google-logo" />
             
             <div>
                     <Search />
