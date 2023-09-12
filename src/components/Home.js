@@ -52,7 +52,7 @@ const Home = () => {
                     
                 </Header>
                 <Header>
-                    <p>Mail</p>
+                    
                     <p>Images</p>
                     <AppsIcon className = 'left-margin'/>
                     <AvatarIcon className = 'left-margin'/>
