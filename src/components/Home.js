@@ -59,7 +59,7 @@ const Home = () => {
                 </Header>
             </HeaderContainer>
             <BodyContainer>
-            <img src= {Google} alt="google-logo" />
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/320px-Google_2015_logo.svg.png" alt="google-logo" />
             
             <div>
                     <Search />
